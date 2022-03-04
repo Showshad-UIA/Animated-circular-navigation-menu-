@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #222237;
+}
+.menu {
+	position: relative;
+	width: 300px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.menu .toggle {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	color: #222327;
+	background: #fff;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3em;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.menu .toggle.active {
+	transform: rotate(315deg);
+	box-shadow: 0 0 68px #fff, 0 0 0 68px #fff;
+	background: #222237;
+	color: #fff;
+}
+.menu li {
+	position: absolute;
+}
