@@ -40,4 +40,29 @@ body {
 }
 .menu li {
 	position: absolute;
+	list-style: none;
+	left: 10px;
+	transform: rotate(calc(360deg / 8 * var(--i))) translateX(40px);
+	transform-origin: 140px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+.menu.active li {
+	visibility: visible;
+	opacity: 1;
+}
+.menu li a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 55px;
+	height: 55px;
+	font-size: 2em;
+	color: #222327;
+	transform: rotate(calc(360deg / -8 * var(--i)));
+	border-radius: 50%;
+}
+.menu.active li.active {
+	transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
 }
