@@ -8,7 +8,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: #222237;
+	background: #222327;
 }
 .menu {
 	position: relative;
@@ -35,7 +35,7 @@ body {
 .menu .toggle.active {
 	transform: rotate(315deg);
 	box-shadow: 0 0 68px #fff, 0 0 0 68px #fff;
-	background: #222237;
+	background: #222327;
 	color: #fff;
 }
 .menu li {
@@ -65,4 +65,59 @@ body {
 }
 .menu.active li.active {
 	transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+}
+.indicator {
+	position: absolute;
+	left: calc(50% + 2.5px);
+	transform-origin: right;
+	width: 100px;
+	height: 1px;
+	background: transparent;
+	pointer-events: none;
+	transition: 0.5s;
+}
+.indicator::before {
+	content: "";
+	position: absolute;
+	top: -27.5px;
+	left: 72px;
+	width: 55px;
+	height: 55px;
+	background: #222327;
+	box-shadow: 0 0 0 6px #29fd53;
+	border-radius: 50%;
+	transition: 0.5s;
+	opacity: 0;
+}
+.menu.active .indicator::before {
+	opacity: 1;
+	top: -27.5px;
+	left: -27.5px;
+	opacity: 1;
+	background: #29fd53;
+	box-shadow: 0 0 0 6px #222237;
+}
+.menu li:nth-child(2).active ~ .indicator {
+	transform: translateX(-103px) rotate(0deg);
+}
+.menu li:nth-child(3).active ~ .indicator {
+	transform: translateX(-103px) rotate(45deg);
+}
+.menu li:nth-child(4).active ~ .indicator {
+	transform: translateX(-103px) rotate(90deg);
+}
+.menu li:nth-child(5).active ~ .indicator {
+	transform: translateX(-103px) rotate(135deg);
+}
+.menu li:nth-child(6).active ~ .indicator {
+	transform: translateX(-103px) rotate(180deg);
+}
+.menu li:nth-child(7).active ~ .indicator {
+	transform: translateX(-103px) rotate(225deg);
+}
+.menu li:nth-child(8).active ~ .indicator {
+	transform: translateX(-103px) rotate(270deg);
+}
+.menu li:nth-child(9).active ~ .indicator {
+	transform: translateX(-103px) rotate(315deg);
 }
