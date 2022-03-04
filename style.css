@@ -10,6 +10,10 @@ body {
 	min-height: 100vh;
 	background: #222327;
 }
+h1 {
+	text-align: center;
+	color: aqua;
+}
 .menu {
 	position: relative;
 	width: 300px;
